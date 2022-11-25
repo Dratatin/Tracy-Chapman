@@ -1,0 +1,26 @@
+.header-nav {
+    margin-bottom: 3rem;
+    @media screen and (max-width:768px) {
+        margin-bottom: 1rem;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 1rem;
+        @media screen and (max-width:768px) {
+            justify-content: flex-start;
+        }
+        &__item {
+            text-transform: uppercase;
+            transition: opacity 400ms ease;
+            cursor: pointer;
+        }
+        &:hover > &__item {
+            opacity: 0.3;
+        }
+        &:hover > &__item:hover {
+            opacity: 1;
+        }
+    }
+}

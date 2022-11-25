@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: -webkit-fill-available;
+}
+
+:root {
+    --vh: 1vh;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #000;
+    color: white;
+}
+
+input, ul, li, a, button {
+    all: unset;
+}
+
+/* Avoid Chrome to see Safari hack */
+@supports (-webkit-touch-callout: none) {
+    body {
+      /* The hack for Safari */
+      min-height: -webkit-fill-available;
+    }
+  }

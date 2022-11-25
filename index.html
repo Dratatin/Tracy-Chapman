@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/main.css">
+    <title>Tracy Chapman</title>
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="header__link header__link--inactive"><h1 class="header__link__title">Tracy Chapman</h1></a>
+        <div class="header__wrapper">
+            <input type="text" class="header__wrapper__searchbar" placeholder="search">
+        </div>
+    </header>
+    <main class="main main--home">
+        <nav class="side-nav">
+            <button class="side-nav__arrow side-nav__arrow--up">
+                <img src="/img/arrowdown.svg" alt="arrow up icon" class="side-nav__arrow__img">
+                <img src="/img/arrowdown.svg" alt="arrow up icon" class="side-nav__arrow__img side-nav__arrow__img--second">
+            </button>
+            <ul class="side-nav__list">
+                <li id="firstItem" class="side-nav__list__item"><a href="/news.html">News</a></li>
+                <li class="side-nav__list__item"><a href="#">Biography</a></li>
+                <li class="side-nav__list__item"><a href="#">Discography</a></li>
+                <li class="side-nav__list__item"><a href="#">Concerts</a></li>
+                <li class="side-nav__list__item"><a href="#">Lyrics</a></li>
+                <li class="side-nav__list__item"><a href="#">Photos</a></li>
+                <li class="side-nav__list__item"><a href="#">Video</a></li>
+                <li id="lastItem" class="side-nav__list__item"><a href="#">Press</a></li>
+            </ul>
+            <button class="side-nav__arrow side-nav__arrow--down">
+                <img src="/img/arrowdown.svg" alt="arrow down icon" class="side-nav__arrow__img">
+                <img src="/img/arrowdown.svg" alt="arrow down icon" class="side-nav__arrow__img side-nav__arrow__img--second">
+            </button>
+        </nav>
+        
+    </main>
+    <div class="player">
+        <div class="player__wrapper">
+            <div class="player__wrapper__track">
+                <div class="player__wrapper__track__name">
+                    <span id="track-name"></span>
+                </div>
+                <span id="current-time"></span>
+                <input id="track-slider" type="range" min="1" max="100" value="0" class="slider">
+                <span id="total-duration"></span>
+            </div>
+            <div class="player__wrapper__buttons">
+                <div class="button-ctn">
+                    <button id="previous-track" class="button-ctn__cta">
+                        <img src="/img/nextTrack.svg" alt="previous icon">
+                    </button>
+                </div>
+                <div class="button-ctn button-ctn--play">
+                    <button class="button-ctn__cta">
+                        <img id="play" src="/img/play.svg" alt="play icon">
+                        <img id="pause" class="hide" src="/img/pause.svg" alt="pause icon">
+                    </button>
+                </div>
+                <div class="button-ctn button-ctn--next">
+                    <button id="next-track" class="button-ctn__cta">
+                        <img src="/img/nextTrack.svg" alt="next icon">
+                    </button>
+                </div>
+                <div class="button-ctn button-ctn--volume">
+                    <input type="range" min="1" max="100" value="100" class="slider slider--hidden">
+                    <button class="button-ctn__cta">
+                        <img src="/img/volume.svg" alt="volume icon">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/script/app.js" type="module"></script>
+</body>
+</html>

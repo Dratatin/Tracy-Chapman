@@ -1,0 +1,13 @@
+@font-face {
+	font-family: 'Melodrama-Variable';
+	src: url('../fonts/Melodrama-Variable.woff2') format('woff2'),
+		 url('../fonts/Melodrama-Variable.woff') format('woff'),
+		 url('../fonts/Melodrama-Variable.ttf') format('truetype');
+		 font-weight: 300 700;
+		 font-display: swap;
+		 font-style: normal;
+  }
+
+body {
+	font-family: 'Montserrat', sans-serif;
+}

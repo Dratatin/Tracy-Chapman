@@ -1,0 +1,120 @@
+.side-nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    &__list {
+        display: flex;
+        flex-direction: column;
+        height: 349px;
+        overflow-y: scroll;        
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        &__item {
+            font-family: 'Melodrama-Variable', serif;
+            font-size: 64px;
+            text-transform: uppercase;
+            transition: opacity 400ms ease;
+            cursor: pointer;
+            animation: slide 1s ease-in-out backwards;
+            @for $i from 1 through 4 {
+                &:nth-child(#{$i}n){
+                    animation-delay: 0.3s + 0.3s * $i - 1;
+                }
+            }
+            @media screen and (max-width:768px) {
+                @for $i from 1 through 5 {
+                    &:nth-child(#{$i}n){
+                        animation-delay: 0.3s + 0.3s * $i - 1;
+                    }
+                }
+                font-size: 52px;
+            }
+        }
+        &:hover > &__item {
+            opacity: 0.3;
+        }
+        &:hover > &__item:hover {
+            opacity: 1;
+        }
+    }
+    &__arrow {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        &--up {
+            transform: rotate(180deg);
+        }
+        &__img {
+            width: 55px;
+            animation-name: arrowbouncesecond;
+            animation-duration:1.5s;
+            animation-iteration-count:infinite;
+            animation-timing-function:ease-in-out;
+            &--second {
+                animation-delay:0.1s;
+                width: 45px;
+            }
+        }
+    }
+}
+
+@keyframes arrowbounce {
+    0% {
+        opacity: 1; 
+        transform: translateY(0px) scale(1);
+    }
+    25%{
+        opacity: 0; 
+        transform:translateY(10px) 
+        scale(0.9);
+    }
+    26%{
+        opacity: 0; 
+        transform:translateY(-10px) 
+        scale(0.9);
+    }
+    55% {
+        opacity: 1; 
+        transform: translateY(0px) 
+        scale(1);
+    }
+}
+
+@keyframes arrowbouncesecond {
+    0% {
+        opacity: 1; 
+        transform: translateY(0px) scale(1);
+    }
+    25%{
+        opacity: 0; 
+        transform:translateY(10px) 
+        scale(0.9);
+    }
+    26%{
+        opacity: 0; 
+        transform:translateY(-40px) 
+        scale(0.9);
+    }
+    55% {
+        opacity: 1; 
+        transform: translateY(0px) 
+        scale(1);
+    }
+}
+
+@keyframes slide {
+    from {
+        opacity: 0; 
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1; 
+        transform: translateY(0px) 
+    }
+}

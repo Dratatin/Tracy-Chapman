@@ -1,0 +1,114 @@
+.new {
+    border: 1px solid #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    transition: opacity 400ms ease;
+    animation: slideHoriz 1s ease-in-out backwards;
+    @for $i from 1 through 5 {
+        &:nth-child(#{$i}n){
+            animation-delay: 0.3s + 0.3s * $i - 1;
+        }
+    }
+    @media screen and (min-width:768px) {
+        &:hover {
+            .new__tag {
+                right: 10px;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__tag {
+        background: #fff;
+        color: #000;
+        position: absolute;
+        top: 10px;
+        right: -30px;
+        padding: 2px 5px 1px 5px;
+        font-weight: 600;
+        border: 1px solid #fff;
+        text-transform: uppercase;
+        font-size: 12px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out, right 0.3s ease-in-out;
+        @media screen and (max-width:768px) {
+            opacity: 1;
+            right: 10px;
+        }
+    }
+    &__img {
+        position: relative;
+        height: 100%;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+            filter: contrast(80%);
+        }
+        &:after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(to bottom, rgba(255,0,0,0), #000);
+            width: 100%;
+            height: 50%;
+            z-index: 0;
+        }
+    }
+    &__views {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        z-index: 2;
+        font-size: 14px;
+        color: rgb(155, 155, 155);
+    }
+    &__details {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 70%;
+        padding: 1rem;
+        display: flex;
+        &__link {
+            gap: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            &__title {
+                cursor: pointer;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            &__description {
+                cursor: pointer;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            &__date{
+                font-style: italic;
+                font-size: 14px;
+                color: rgb(155, 155, 155);
+            }
+        }
+    }
+}
+
+@keyframes slideHoriz {
+    from {
+        opacity: 0; 
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1; 
+        transform: translateX(0px) 
+    }
+}

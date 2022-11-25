@@ -1,0 +1,118 @@
+.player {
+    position: fixed;
+    padding: 1rem 2rem;
+    margin-right: 3rem;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 60%);
+    z-index: 2;
+    @media screen and (max-width:768px) {
+        margin-right: 0;
+        padding: 4rem 1rem 1rem 1rem;
+    }
+    &__wrapper {
+        display: flex;
+        gap: 2rem;
+        @media screen and (max-width:768px) {
+            align-items: center;
+            flex-direction: column;
+            flex: 1;
+            gap: 1rem;
+        }
+        &__track {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex: 1;
+            @media screen and (max-width:768px) {
+                width: 100%;
+                order: 2;
+            }
+            &__name {
+                width: 130px;
+                overflow: hidden;
+                white-space: nowrap;
+                @media screen and (max-width:768px) {
+                    width: 90px;
+                }
+                span {
+                    display: block;
+                    animation: scrollAnimation 8s linear infinite;
+                }
+            }
+            #track-slider {
+                width: 200px;
+                @media screen and (max-width:768px) {
+                    width: 50px;
+                    flex: 1;
+                }
+            }
+        }
+        &__buttons {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            @media screen and (max-width:768px) {
+                order: 1;
+            }
+            .button-ctn {
+                &__cta {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                }
+                &--next {
+                    img {
+                        transform: rotate(180deg);
+                    }
+                }
+                &--play {
+                    button {
+                        position: relative;
+                        width: 30px;
+                        height: 30px;
+                        img {
+                            position: absolute;
+                            bottom: 50%;
+                            left: 50%;
+                            transform: translate(-50%, 50%);
+                            &.hide {
+                                opacity: 0;
+                            }
+                        }
+                    }
+                }
+                &--volume {
+                    position: relative;
+                    cursor: pointer;
+                    .slider {
+                        position: absolute;
+                        top: -70px;
+                        left: -35px;
+                        transform: rotate(-90deg);
+                        width: 100px;
+                        opacity: 1;
+                        transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out;
+                        &--hidden {
+                            pointer-events: none;
+                            top: -50px;
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes scrollAnimation {
+    from{
+        transform: translate(100%,0);
+    }
+    to{
+        transform: translate(-300%, 0);
+    }
+}

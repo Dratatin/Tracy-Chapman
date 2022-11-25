@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/main.css">
+    <title>Tracy Chapman</title>
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="header__link"><h1 class="header__link__title">Tracy Chapman</h1></a>
+        <div class="header__wrapper">
+            <nav class="header-nav">
+                <ul class="header-nav__list">
+                    <li id="firstItem" class="header-nav__list__item"><a href="/news.html">News</a></li>
+                    <li class="header-nav__list__item"><a href="#">Biography</a></li>
+                    <li class="header-nav__list__item"><a href="#">Discography</a></li>
+                    <li class="header-nav__list__item"><a href="#">Concerts</a></li>
+                    <li class="header-nav__list__item"><a href="#">Lyrics</a></li>
+                    <li class="header-nav__list__item"><a href="#">Photos</a></li>
+                    <li class="header-nav__list__item"><a href="#">Video</a></li>
+                    <li id="lastItem" class="header-nav__list__item"><a href="#">Press</a></li>
+                </ul>
+            </nav>
+            <div class="focus-background">
+            </div>
+            <input type="text" class="header__wrapper__searchbar" placeholder="search">
+        </div>
+    </header>
+    <main class="main">
+        <section class="article">
+            <div class="article__heading">
+                <h2 class="article__heading__title">‘Beach Blanket Babylon’ scholarship celebrated 15 years this year</h2>
+                <span class="article__heading__infos">By Catherine Bigelow, San Francisco Chronicle, June 14, 2017</span>
+            </div>
+            <div class="article__wrapper">
+                    <p class="article__wrapper__paragraph">
+                        <span id="start" class="article__wrapper__paragraph--bold">
+                            You’d think after 15 years, “Beach Blanket Babylon” producer Jo Schuman Silver would have her joyful tears under control. But once again, the petite powerhouse got verklempt at Club Fugazi during her annual Scholarship for the Arts.
+                        </span><br><br>
+                        
+                        Led by former mayor Willie Brown and emcee Don Bleu, this rollicking pep rally paid tribute to the madcap genius of Schuman Silver’s late husband and “BBB” creator, Steve Silver, for whom the nation’s longest-running musical revue’s foundation is named.<br><br>
+    
+                        The sold-out house shook with the cheers of family and friends for the nine talented Bay Area high school teens who belted out their best onstage as they competed in the disciplines of dance, theater and voice.<br><br>
+    
+                        Yet just three — dancer Yongfeng Lim (Bellarmine College Prep), actor Peter Stielstra (Lowell High School) and singer Emilie Kealani Suarez (Independence High School) — took home a big “BBB”-size $15K check to further their artistic college ambitions.<br><br>
+                    </p>
+                    <div class="article__wrapper__img">
+                        <img src="/img/article-img1.jpg" alt="">
+                    </div>
+                    <p  class="article__wrapper__paragraph">
+                        Also in the house: a roster of celebrity judges, including composer Gordon Getty; Grammy winner Tracy Chapman; SFJazz Artistic Director Randall Kline; movie maven Jan Wahl; YBCA’s Jonathan Moscone; jazz artist Paula West; S.F. Opera General Director Matthew Shilvock; ACT Artistic Director Carey Perloff; and choreographer Val Caniparoli.<br><br>
+    
+                        “These young people who have done their best to compete are in keeping with what Steve Silver had in mind,” Brown exclaimed, “and what’s been taken around the world. This show has gone everywhere, representing San Francisco in the most glorious, wonderful way! And if you haven’t seen ‘Beach Blanket Babylon’ with Trump, you haven’t seen anything.”<br><br>
+                    </p>
+                    <div class="article__wrapper__img">
+                        <img src="/img/article-img2.jpg" alt="">
+                    </div>
+                    <div class="article__wrapper__link">
+                        <a id="articleScroll" href="#start"><img src="/img/biggerArrow.svg" alt="arrow icon">navigate to start</a>
+                    </div>
+            </div>
+            <div class="swingScroll">
+                <img class="swingScroll__icon" src="/img/biggerArrow.svg" alt="">
+                <span class="swingScroll__text">scroll</span>
+                <img class="swingScroll__icon swingScroll__icon--reverse" src="/img/biggerArrow.svg" alt="">
+            </div>
+        </section>
+        <div class="player">
+            <div class="player__wrapper">
+                <div class="player__wrapper__track">
+                    <div class="player__wrapper__track__name">
+                        <span id="track-name"></span>
+                    </div>
+                    <span id="current-time"></span>
+                    <input id="track-slider" type="range" min="1" max="100" value="0" class="slider">
+                    <span id="total-duration"></span>
+                </div>
+                <div class="player__wrapper__buttons">
+                    <div class="button-ctn">
+                        <button id="previous-track" class="button-ctn__cta">
+                            <img src="/img/nextTrack.svg" alt="previous icon">
+                        </button>
+                    </div>
+                    <div class="button-ctn button-ctn--play">
+                        <button class="button-ctn__cta">
+                            <img id="play" src="/img/play.svg" alt="play icon">
+                            <img id="pause" class="hide" src="/img/pause.svg" alt="pause icon">
+                        </button>
+                    </div>
+                    <div class="button-ctn button-ctn--next">
+                        <button id="next-track" class="button-ctn__cta">
+                            <img src="/img/nextTrack.svg" alt="next icon">
+                        </button>
+                    </div>
+                    <div class="button-ctn button-ctn--volume">
+                        <input type="range" min="1" max="100" value="100" class="slider slider--hidden">
+                        <button class="button-ctn__cta">
+                            <img src="/img/volume.svg" alt="volume icon">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="/script/app.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/main.css">
+    <title>Tracy Chapman</title>
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="header__link"><h1 class="header__link__title">Tracy Chapman</h1></a>
+        <div class="header__wrapper">
+            <nav class="header-nav">
+                <ul class="header-nav__list">
+                    <li id="firstItem" class="header-nav__list__item"><a href="#">News</a></li>
+                    <li class="header-nav__list__item"><a href="#">Biography</a></li>
+                    <li class="header-nav__list__item"><a href="#">Discography</a></li>
+                    <li class="header-nav__list__item"><a href="#">Concerts</a></li>
+                    <li class="header-nav__list__item"><a href="#">Lyrics</a></li>
+                    <li class="header-nav__list__item"><a href="#">Photos</a></li>
+                    <li class="header-nav__list__item"><a href="#">Video</a></li>
+                    <li id="lastItem" class="header-nav__list__item"><a href="#">Press</a></li>
+                </ul>
+            </nav>
+            <input type="text" class="header__wrapper__searchbar" placeholder="search">
+        </div>
+    </header>
+    <main class="main">
+        <section class="news">
+            <div class="news__heading">
+                <nav class="news__heading__nav">
+                    <a class="news__heading__nav__link" href="/">Home</a>
+                </nav>
+                <div class="news__heading__line"></div>
+                <span>News</span>
+            </div>
+            <div class="news__wrapper">
+                <article id="start" class="new">
+                    <div class="new__img">
+                        <img src="/img/news1.jpg" alt="">
+                    </div>
+                    <div class="new__details">
+                        <a class="new__details__link" href="/article.html">
+                            <h3 class="new__details__link__title">Tracy Chapman Tour Dates 2022</h3>
+                            <p class="new__details__link__description">Is Tracy Chapman touring in 2022 ? Read about tour dates in Europe and in the US, where to buy tickets...</p> 
+                            <span class="new__details__link__date">29 January 2022</span>
+                        </a>
+                    </div>
+                    <span class="new__tag">Concerts</span>
+                </article>
+                <article id="start" class="new">
+                    <div class="new__img">
+                        <img src="/img/news2.jpeg" alt="">
+                    </div>
+                    <div class="new__details">
+                        <a class="new__details__link" href="/article.html">
+                            <h3 class="new__details__link__title">Whatever happened to Tracy Chapman?</h3>
+                            <p class="new__details__link__description">Tracy Chapman is still in the music business but not active lately. She promised she hasn’t retired yet.</p> 
+                            <span class="new__details__link__date">13 February 2021</span>
+                        </a>
+                    </div>
+                    <span class="new__tag">FAQ</span>
+                </article>
+                <article id="start" class="new">
+                    <div class="new__img">
+                        <img src="/img/news3.jpg" alt="">
+                    </div>
+                    <div class="new__details">
+                        <a class="new__details__link" href="/article.html">
+                            <h3 class="new__details__link__title">Tracy Chapman in concert in the UK in 2021?</h3>
+                            <p class="new__details__link__description">Tracy Chapman hasn’t performed in the UK since June 2009! Don’t miss her next gig!</p> 
+                            <span class="new__details__link__date">21 Octobre 2020</span>
+                        </a>
+                    </div>
+                    <span class="new__tag">News 2022</span>
+                </article>
+                <article id="start" class="new">
+                    <div class="new__img">
+                        <img src="/img/news4.jpg" alt="">
+                    </div>
+                    <div class="new__details">
+                        <a class="new__details__link" href="/article.html">
+                            <h3 class="new__details__link__title">Did Ed Sheeran copy Tracy Chapman on “Shape Of You”?</h3>
+                            <p class="new__details__link__description">The UK number one single, “Shape OF You”, penned and performed by British singer Ed…</p> 
+                            <span class="new__details__link__date">2 February 2017</span>
+                        </a>
+                    </div>
+                    <span class="new__tag">Concerts</span>
+                </article>
+                <article id="start" class="new">
+                    <div class="new__img">
+                        <img src="/img/news5.jpg" alt="">
+                    </div>
+                    <div class="new__details">
+                        <a class="new__details__link" href="/article.html">
+                            <h3 class="new__details__link__title">Tracy Chapman attends show "Luzia" by Cirque du Soleil in San Francisco</h3>
+                            <p class="new__details__link__description">Tracy Chapman attends show "Luzia" byCirque du Soleil in San Francisco, CA at AT&T Park…</p> 
+                            <span class="new__details__link__date">29 January 2022</span>
+                        </a>
+                    </div>
+                    <span class="new__tag">News 2022</span>
+                </article>
+                <div class="news__wrapper__link">
+                    <a id="newsScroll" href="#start"><img src="/img/biggerArrow.svg" alt="arrow icon"><span>navigate to start</span></a>
+                </div>
+            </div>
+            <div class="swingScroll">
+                <img class="swingScroll__icon" src="/img/biggerArrow.svg" alt="">
+                <span class="swingScroll__text">scroll</span>
+                <img class="swingScroll__icon swingScroll__icon--reverse" src="/img/biggerArrow.svg" alt="">
+            </div>
+        </section>
+        <div class="player">
+            <div class="player__wrapper">
+                <div class="player__wrapper__track">
+                    <div class="player__wrapper__track__name">
+                        <span id="track-name"></span>
+                    </div>
+                    <span id="current-time"></span>
+                    <input id="track-slider" type="range" min="1" max="100" value="0" class="slider">
+                    <span id="total-duration"></span>
+                </div>
+                <div class="player__wrapper__buttons">
+                    <div class="button-ctn">
+                        <button id="previous-track" class="button-ctn__cta">
+                            <img src="/img/nextTrack.svg" alt="previous icon">
+                        </button>
+                    </div>
+                    <div class="button-ctn button-ctn--play">
+                        <button class="button-ctn__cta">
+                            <img id="play" src="/img/play.svg" alt="play icon">
+                            <img id="pause" class="hide" src="/img/pause.svg" alt="pause icon">
+                        </button>
+                    </div>
+                    <div class="button-ctn button-ctn--next">
+                        <button id="next-track" class="button-ctn__cta">
+                            <img src="/img/nextTrack.svg" alt="next icon">
+                        </button>
+                    </div>
+                    <div class="button-ctn button-ctn--volume">
+                        <input type="range" min="1" max="100" value="100" class="slider slider--hidden">
+                        <button class="button-ctn__cta">
+                            <img src="/img/volume.svg" alt="volume icon">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="/script/app.js" type="module"></script>
+</body>
+</html>

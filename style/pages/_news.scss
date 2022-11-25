@@ -1,0 +1,113 @@
+.news {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+    @media screen and (max-width:768px) {
+        margin-bottom: 0;
+    }
+    &__img {
+        position: absolute;
+        top: 50%;
+        left: -400px;
+        transform: translateY(-50%) scaleX(-1);
+        width: 700px;
+        z-index: -1;
+    }
+    &__heading {
+        margin-right: 8rem;
+        font-size: 48px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        font-family: 'Melodrama-Variable', serif;
+        font-weight: 400;
+        margin-bottom: 3rem;
+        z-index: 2;
+        @media screen and (max-width:768px) {
+            margin-bottom: 1rem;
+            margin-right: 2em;
+        }
+        &__line {
+            display: block;
+            height: 1px;
+            background: #fff;
+            margin: 0 1rem;
+            flex: 1;
+            @media screen and (min-width:768px) {
+                flex: none;
+                width: 20%;
+            }
+        }
+        &__nav {
+            display: flex;
+            align-items: center;
+            &__link {
+                cursor: pointer;
+            }
+        }
+    }
+    &__wrapper {
+        margin-left: 6rem;
+        gap: 6rem;
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 30%;
+        overflow: hidden;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        scrollbar-width: none;
+        height: 35vh;
+        -ms-overflow-style: none;  /* IE and Edge */
+        margin-bottom: 3rem;
+        min-height: 200px;
+        @media screen and (max-width:1200px) {
+            gap: 5rem;
+            margin-left: 0rem;
+            grid-auto-columns: 50%;
+        }
+        @media screen and (max-width:768px) {
+            gap: 4rem;
+            grid-auto-columns: 80%;
+            margin-bottom: 1rem;
+        }
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        @media screen and (min-width:768px) {
+            &:hover > .new {
+                opacity: 0.3;
+            }
+            &:hover > .new:hover {
+                opacity: 1;
+            }
+        }
+        &__link {
+            a {
+                display: inline-block;
+                scroll-behavior: smooth;
+                cursor: pointer;
+                img {
+                    margin-right: 10px;
+                }
+                span {
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1));
+            width: 70px;
+            height: 100%;
+            top: 0;
+            right: 0;
+            z-index: 1;
+            margin-left: auto;
+        }
+    }
+}

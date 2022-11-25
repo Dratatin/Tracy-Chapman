@@ -1,0 +1,38 @@
+.swingScroll {
+    margin-left: 6rem;
+    display: flex;
+    @media screen and (max-width:1200px) {
+        margin-left: 0rem;
+    }
+    &__text {
+        margin: 0 0.7rem;
+        animation: swing 5s linear infinite;
+    }
+    div {
+        flex: 1;
+    }
+    &__icon {
+        width: 43px;
+        &--reverse {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+@keyframes swing {
+0%{
+    transform: translateX(0px);
+}
+90%{
+    transform: translateX(0px);
+}
+94% {
+    transform: translateX(5px);
+}
+96% {
+    transform: translateX(-5px);
+}
+100%{
+    transform: translateX(0px);
+}
+}
